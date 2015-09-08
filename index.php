@@ -17,7 +17,7 @@
 
 	<h2>Distionary</h2>
 		<table class="order-list">
-			<thead>
+			<!-- <thead>
 				<tr>
 					<th>#</th>
 					<th>Client Name</th>
@@ -25,7 +25,7 @@
 					<th>Register Date</th>
 					<th>Expire Date</th>
 				</tr>
-			</thead>
+			</thead> -->
 			<tbody>
 			<?php
 	    	$args = array(
@@ -55,9 +55,9 @@
 						$reminder_d = $before_reminder_d - $now;
 					endif;
 				?>
-			
 				<tr>
-					<td><?php echo $count?></td>
+			
+					<!-- <td><?php echo $count?></td> -->
 					<td>
 						<a class="sp-info-client" href="<?php echo esc_url( get_permalink(get_post_meta( $post->ID, 'sp_order_client_name', true )) ); ?>"><?php echo get_the_title( get_post_meta( $post->ID, 'sp_order_client_name', true ) ); ?></a>
 					</td>
@@ -75,7 +75,7 @@
 						</div>
 						<?php endif; ?>
 					</td>
-					<td><?php 
+					<!-- <td><?php 
 							if ( $status_h == "on" ) :
 							 	echo date("j F, Y", strtotime(get_post_meta( $post->ID, 'sp_order_register_date_h', true )));
 							endif;
@@ -93,7 +93,7 @@
 								echo '<i style="color:red">Renewal</i>';
 							endif;
 						?>
-					</td>
+					</td> -->
 				</tr>
 			<?php $count++;
 			endwhile; wp_reset_postdata();
