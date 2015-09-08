@@ -16,8 +16,6 @@ if ( ! isset( $cp_menu_position ) )
 
 //All custom posts
 load_template( SP_BASE_DIR . '/library/custom-posts/cp-client.php' );
-load_template( SP_BASE_DIR . '/library/custom-posts/cp-product.php' );
-load_template( SP_BASE_DIR . '/library/custom-posts/cp-order.php' );
 
 //Taxonomies
-load_template( SP_BASE_DIR . '/library/custom-posts/taxonomy-product.php' );
+// load_template( SP_BASE_DIR . '/library/custom-posts/taxonomy-product.php' );
