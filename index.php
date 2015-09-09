@@ -15,7 +15,7 @@
 	    <li>Text domain: <?php echo SP_TEXT_DOMAIN; ?></li>
 	</ul> -->
 
-	<h2>For Test</h2>
+	<h2 class="distionary">For Test</h2>
 		<table class="order-list">
 			<!-- <thead>
 				<tr>
@@ -39,10 +39,10 @@
 				while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
 				<tr>
 					<td>
-						<a class="sp-info-client" href="<?php echo esc_url( get_permalink(get_post_meta( $post->ID, 'sp_order_client_name', true )) ); ?>"><?php echo get_the_title( get_post_meta( $post->ID, 'sp_order_client_name', true ) ); ?></a>
+						<a class="sp-info-client" href="<?php echo esc_url( get_permalink() ); ?>"><?php echo get_the_title(); ?></a>
 					</td>
 				</tr>
-			<?php $count++;
+			<?php
 			endwhile; wp_reset_postdata();
 			endif; ?>
 			</tbody>
